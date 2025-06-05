@@ -74,7 +74,7 @@ serve(async (req: Request): Promise<Response> => {
   const azureJson = await azureResponse.json();
   const baseResponse =
     azureJson?.choices?.[0]?.message?.content || "No response from Azure OpenAI";
-  const result = `${baseResponse}\n\nThere may be errors in my responses; always refer to the course web page: ${SYLLABUS_LINK}`;
+  const result = `${baseResponse}\n\nThere may be errors in my responses; always double check my responses: ${SYLLABUS_LINK}`;
 
   let qualtricsStatus = "Qualtrics not called";
 
